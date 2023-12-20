@@ -8,5 +8,7 @@ RUN pip install autobahn
 
 COPY . /src/
 RUN cd /src;
-
+LABEL org.opencontainers.image.description HAL
+LABEL org.opencontainers.image.source=https://github.com/datasance/hardwareabstraction
+LABEL org.opencontainers.image.licenses=EPL2.0
 CMD ["python3", "/src/hal_main.py"]
