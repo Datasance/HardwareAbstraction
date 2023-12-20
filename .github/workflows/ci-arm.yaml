@@ -17,7 +17,7 @@ on:
       - CHANGELOG.md
       - LICENSE
 env:
-  IMAGE_NAME: 'HAL-arm'
+  IMAGE_NAME: 'hal-arm'
 
 jobs:
   build:
@@ -71,7 +71,7 @@ jobs:
       with:
         file: Dockerfile
         push: true
-        outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Proxy
+        outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=HAL-arm
         tags: |
           ghcr.io/datasance/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.VERSION }}
           ghcr.io/datasance/${{ env.IMAGE_NAME }}:latest
