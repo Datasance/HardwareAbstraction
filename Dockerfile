@@ -8,8 +8,6 @@ RUN apk add --no-cache \
     python3-dev && \
     pip install --no-cache-dir --upgrade pip pyserial autobahn RPi.GPIO && \
     apk del build-base python3-dev
-RUN pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir pyserial autobahn RPi.GPIO
 
 COPY . /src/
 RUN cd /src;
